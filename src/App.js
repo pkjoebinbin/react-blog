@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 import { renderRoutes } from 'react-router-config'
 import routesConfig from './router/routeConfig'
 
