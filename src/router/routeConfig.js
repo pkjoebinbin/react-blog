@@ -4,7 +4,7 @@ const Login = AsyncComponent(() => import('../views/login/Login'))
 
 const routes = [
   {
-    path: '/login',
+    path: '/',
     component: Login
   }
 ]
