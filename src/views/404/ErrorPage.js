@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
-import { Button } from 'antd'
-class Login extends Component {
+
+class ErrorPage extends Component {
   render () {
     return (
       <div>
-        登陆
+        404
       </div>
     )
   }
 }
 
-export default Login
+export default ErrorPage

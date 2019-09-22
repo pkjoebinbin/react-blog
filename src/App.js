@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import { renderRoutes } from 'react-router-config'
-// import routesConfig from './router/routeConfig'
+import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
+// import { renderRoutes } from 'react-router-config'
+import routes from './router/routeConfig'
 
 class App extends Component {
   render() {
@@ -9,14 +9,20 @@ class App extends Component {
       <div className="App">
         <BrowserRouter>
           <Switch>
-            <Route>
-              
-            </Route>
+          {
+            routes.map((item, i) => {
+              if (item.exact) {
+                return <Route exact path={item.path} key={i} render={props => (<item.component {...props} routes={item.subs}/>)}/>
+              } else {
+                return <Route path={item.path} key={i} render={props => (<item.component {...props} routes={item.subs}/>)}/>
+              }
+            })
+          }
+          <Redirect to="/404"/>
           </Switch>
-          {/* {renderRoutes(routesConfig)} */}
         </BrowserRouter>
       </div>
-    );
+    )
   }
 }
 
