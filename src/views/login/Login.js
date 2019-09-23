@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Form, Icon, Input, Button } from 'antd';
+import './style.less'
 
 class Login extends Component {
   constructor (props) {
@@ -28,6 +29,7 @@ class Login extends Component {
     const { getFieldDecorator } = this.props.form
     return (
       <div>
+        asdfasdf
          <Form onSubmit={this.handleSubmit} className="login-form">
         <Form.Item>
           {getFieldDecorator('username', {
