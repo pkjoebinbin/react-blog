@@ -18,7 +18,8 @@ class App extends Component {
               }
             })
           }
-          <Redirect to="/404"/>
+          <Redirect exact from="/" to="/home"/>
+          <Redirect from="*" to="/404"/>
           </Switch>
         </BrowserRouter>
       </div>
