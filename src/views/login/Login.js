@@ -22,6 +22,10 @@ class Login extends Component {
     });
   }
 
+  test = () => {
+    console.log(this.store)
+  }
+
 
 
 
@@ -55,6 +59,8 @@ class Login extends Component {
           <Button type="primary" htmlType="submit" className="login-form-button">
             登录
           </Button>
+
+          <Button onClick={this.test}>测试</Button>
         </Form.Item>
       </Form>
       </div>
