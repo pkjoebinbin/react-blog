@@ -28,12 +28,11 @@ class Login extends Component {
   render () {
     const { getFieldDecorator } = this.props.form
     return (
-      <div>
-        asdfasdf
+      <div className="login-module">
          <Form onSubmit={this.handleSubmit} className="login-form">
         <Form.Item>
           {getFieldDecorator('username', {
-            rules: [{ required: true, message: 'Please input your username!' }],
+            rules: [{ required: true, message: '用户名不能为空' }],
           })(
             <Input
               prefix={<Icon type="user" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -43,7 +42,7 @@ class Login extends Component {
         </Form.Item>
         <Form.Item>
           {getFieldDecorator('password', {
-            rules: [{ required: true, message: 'Please input your Password!' }],
+            rules: [{ required: true, message: '密码不能为空' }],
           })(
             <Input
               prefix={<Icon type="lock" style={{ color: 'rgba(0,0,0,.25)' }} />}
@@ -54,7 +53,7 @@ class Login extends Component {
         </Form.Item>
         <Form.Item>
           <Button type="primary" htmlType="submit" className="login-form-button">
-            Log in
+            登录
           </Button>
         </Form.Item>
       </Form>
