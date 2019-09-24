@@ -3,7 +3,7 @@ import AsyncComponent from '../util/asyncComponent'
 const Login = AsyncComponent(() => import('../views/Login/Login'))
 const Home = AsyncComponent(() => import('../views//Home/Home'))
 const ErrorPage = AsyncComponent(() => import('../views/404/ErrorPage'))
-const  MainLayOut = AsyncComponent(() => import('../views/MainLayOut/MainLayOut'))
+const  MainLayOut = AsyncComponent(() => import('../views/Mainlayout/Mainlayout'))
 
 const routes = [
   {
