@@ -1,9 +1,5 @@
 import React, { Component } from 'react'
 
-const margin = {
-  margin:  0
-}
-
 class Index extends Component {
   render () {
     return (
