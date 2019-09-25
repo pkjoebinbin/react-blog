@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Switch, Redirect } from 'react-router-dom'
 import routes from './router/routeConfig'
 import { Provider } from 'react-redux'
 import store from './store/index'
+// import './index.less';
 
 class App extends Component {
   render() {
