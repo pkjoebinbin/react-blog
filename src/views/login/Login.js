@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import { Form, Icon, Input, Button } from 'antd';
-import './style.less'
+import styles from './style.less'
 
+console.log(styles)
 class Login extends Component {
   constructor (props) {
     super(props)
@@ -29,8 +30,9 @@ class Login extends Component {
   render () {
     const { getFieldDecorator } = this.props.form
     return (
-      <div id="login-module">
-        <Form onSubmit={this.handleSubmit} className="login-form">
+      <div className={styles.loginModule}>
+        asdf
+        {/* <Form onSubmit={this.handleSubmit} className={styles.loginForm}>
           <Form.Item>
             {getFieldDecorator('username', {
               rules: [{ required: true, message: '用户名不能为空' }],
@@ -62,7 +64,7 @@ class Login extends Component {
           </Form.Item>
           <p>important</p>
             <p>important</p>
-        </Form>
+        </Form> */}
       </div>
     )
   }
