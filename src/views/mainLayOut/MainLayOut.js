@@ -53,7 +53,7 @@ class Mainlayout extends Component {
   render () {
     return (
       <div className="Mainlayout">
-        <button onClick={this.show}>123</button>
+        <Button onClick={this.show}>123</Button>
         <Modal visible={this.state.visible} title="test" onOk={this.handleOk} onCancel={this.handleOk}>
           rrrrrrr
         </Modal>
