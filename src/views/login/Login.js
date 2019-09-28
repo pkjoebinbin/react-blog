@@ -1,8 +1,23 @@
 import React, { Component } from 'react'
 import { Form, Icon, Input, Button } from 'antd';
-import styles from './style.less'
+import styled from 'styled-components'
 
-console.log(styles)
+const LoginModule = styled.div `
+  height:100%;
+  position:releative;
+
+  .loginForm {
+    width:350px;
+    height:300px;
+    position:absolute;
+    margin:auto;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+  }
+`
+
 class Login extends Component {
   constructor (props) {
     super(props)
@@ -30,9 +45,8 @@ class Login extends Component {
   render () {
     const { getFieldDecorator } = this.props.form
     return (
-      <div className={styles.loginModule}>
-        asdf
-        {/* <Form onSubmit={this.handleSubmit} className={styles.loginForm}>
+      <LoginModule>
+        <Form onSubmit={this.handleSubmit} className="loginForm">
           <Form.Item>
             {getFieldDecorator('username', {
               rules: [{ required: true, message: '用户名不能为空' }],
@@ -43,7 +57,7 @@ class Login extends Component {
               />,
             )}
           </Form.Item>
-          <Form.Item>
+          <Form.Item className="test">
             {getFieldDecorator('password', {
               rules: [{ required: true, message: '密码不能为空' }],
             })(
@@ -58,14 +72,9 @@ class Login extends Component {
             <Button type="primary" htmlType="submit" className="login-form-button">
               登录
             </Button>
-
-            <Button onClick={this.test}>测试</Button>
-
           </Form.Item>
-          <p>important</p>
-            <p>important</p>
-        </Form> */}
-      </div>
+        </Form>
+      </LoginModule>
     )
   }
 }
