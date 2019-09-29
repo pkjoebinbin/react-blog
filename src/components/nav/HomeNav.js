@@ -12,21 +12,36 @@ const HomeNavStyle = styled.div `
   .header-center {
     width:100%;
     max-width:1200px;
-    background:red;
+    background:#fff;
     margin:0 auto;
+    display:flex;
+  }
+  
+  .logo {
+    background: blue;
+    width:140px;
+  }
+  
+  .nav-list {
+    background:green;
+    width:100%;
   }
 `
 
 class HomeNav extends Component {
-  constructor (props) {
-    super(props)
-  }
+  // constructor (props) {
+  //   super(props)
+  // }
 
   render () {
     return (
       <HomeNavStyle>
         <header className="header-center">
-          NAV
+          <div className="logo">
+            logo
+          </div>
+
+          <nav className="nav-list">12221</nav>
         </header>
       </HomeNavStyle>
     )
