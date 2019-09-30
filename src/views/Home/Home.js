@@ -9,12 +9,15 @@ const { Content } = Layout;
 const ContentStyle = styled.div `
   height:100%;
   width:100%;
-  max-width:1200px;
-  min-width:1200px;
   margin:0 auto;
   background:#f7f7f7;
   overflow:hidden;
   margin-top:64px;
+`
+
+const BannerArticleModule = styled.div `
+  padding:40px 0;
+  background:#f7f7f7;
 `
 
 class Index extends Component {
@@ -22,10 +25,12 @@ class Index extends Component {
     return (
       <div>
         <HomeNav/>
-        <ContentStyle>
+        <BannerArticleModule>
           <Banner/>
+        </BannerArticleModule>
+        {/* <ContentStyle>
           <Content>231231</Content>
-        </ContentStyle>
+        </ContentStyle> */}
       </div>
     )
   }

@@ -4,23 +4,26 @@ import { Carousel } from 'antd'
 
 const BannerStyle = styled.div `
   height:340px;
-  margin: 40px 0 20px 0;
+  margin: 60px auto 0;
+  max-width:1200px;
   display:flex;
+  justify-content:space-between;
+
 
   .left-banner-module {
     width:50%;
     height:100%;
-    margin-right:5px;
+    margin-right:4px;
 
     .ant-carousel {
       height:100%;
-      background:red;
-    }
-  }
+      background:green;
 
-  .img {
-    display:block;
-    width:100%;
+      .left-banner-img {
+        width:100%;
+        display:block;
+      }
+    }
   }
 
   .left-banner-height {
@@ -28,15 +31,21 @@ const BannerStyle = styled.div `
   }
 
   .right-banner-module {
-    background:blue;
+    margin-left:4px;
     width:50%;
-    margin-left:5px;
-    justify-content:center;
-    align-items:center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    /* align-items:stretch; */
+    align-content:space-between;
   }
 
   .right-banner-img {
-    width:48%;
+    width:49.3%;
+    .img-detail {
+      width:100%;
+      display:block;
+    }
   }
 `
 export default class extends Component {
@@ -66,8 +75,8 @@ export default class extends Component {
             {
               this.state.imgs.map((item, key) => {
                 return (
-                  <div>
-                    <img src={item} alt="" key={key} className="img"/>
+                  <div key={key}>
+                    <img src={item} alt=""className="left-banner-img"/>
                   </div>
                 )
               })
@@ -78,7 +87,10 @@ export default class extends Component {
           {
             this.state.rightBannerList.map((item, key) => {
               return (
-                <img src={item} alt="" key={key} className="right-banner-img"/>
+                <div className="right-banner-img" key={key}>
+                  <img src={item} alt={item} className="img-detail"/>
+                  {/* <h3>title</h3> */}
+                </div>
               )
             })
           }

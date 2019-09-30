@@ -2,31 +2,29 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const HomeNavStyle = styled.div `
-  background:blue;
   width:100%;
-  width-max:1200px;
-  background:#fff;
-  height:64px;
-  line-height:64px;
+  height:60px;
+  line-height:60px;
   position:fixed;
   top:0;
   z-index:9;
+  background:#fff;
+  border-bottom:1px solid #efefef;
 
   .header-center {
     width:100%;
     max-width:1200px;
-    background:#fff;
     margin:0 auto;
     display:flex;
   }
   
   .logo {
-    background: blue;
+    background: #ff6231;
     width:140px;
   }
   
   .nav-list {
-    background:green;
+
     width:100%;
   }
 `
