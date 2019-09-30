@@ -8,6 +8,9 @@ const HomeNavStyle = styled.div `
   background:#fff;
   height:64px;
   line-height:64px;
+  position:fixed;
+  top:0;
+  z-index:9;
 
   .header-center {
     width:100%;
