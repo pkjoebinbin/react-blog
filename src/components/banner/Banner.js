@@ -2,13 +2,13 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 import { Carousel } from 'antd'
 
+
 const BannerStyle = styled.div `
   height:340px;
   margin: 60px auto 0;
   max-width:1200px;
   display:flex;
   justify-content:space-between;
-
 
   .left-banner-module {
     width:50%;
@@ -82,14 +82,14 @@ export default class extends Component {
               })
             }
           </Carousel>
-        </div>
+          </div>
         <div className="right-banner-module">
           {
             this.state.rightBannerList.map((item, key) => {
               return (
                 <div className="right-banner-img" key={key}>
                   <img src={item} alt={item} className="img-detail"/>
-                  {/* <h3>title</h3> */}
+                  {/* <h3>{item}</h3> */}
                 </div>
               )
             })

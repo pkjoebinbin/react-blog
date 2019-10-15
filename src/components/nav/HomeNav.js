@@ -30,9 +30,16 @@ const HomeNavStyle = styled.div `
 `
 
 class HomeNav extends Component {
-  // constructor (props) {
-  //   super(props)
-  // }
+  constructor (props) {
+    super(props)
+  }
+
+  state = {
+    navList: [
+      '首页',
+      '归档'
+    ]
+  }
 
   render () {
     return (

@@ -1,18 +1,30 @@
 import React, { Component } from 'react'
 import HomeNav from '../../components/nav/HomeNav'
+import ClassifyModules from '../../components/ClassifyModules/ClassifyModules'
 import Banner from '../../components/banner/Banner'
+import HomeSide from '../../components/side/HomeSide'
 import styled from 'styled-components'
 import { Layout } from 'antd';
 
 const { Content } = Layout;
 
 const ContentStyle = styled.div `
-  height:100%;
-  width:100%;
+  max-width:1200px;
   margin:0 auto;
-  background:#f7f7f7;
+  padding:20px 0;
   overflow:hidden;
-  margin-top:64px;
+  display:flex;
+  justify-content:space-between;
+`
+const HomeSideModuleStyle = styled.div `
+  width:22%;
+  background:#fafafa;
+`
+
+const ContentmoduleStyle = styled.div `
+  width:78%;
+  padding:0 20px;
+  border-left:1px solid #efefef;
 `
 
 const BannerArticleModule = styled.div `
@@ -27,10 +39,17 @@ class Index extends Component {
         <HomeNav/>
         <BannerArticleModule>
           <Banner/>
+          <ClassifyModules/>
         </BannerArticleModule>
-        {/* <ContentStyle>
-          <Content>231231</Content>
-        </ContentStyle> */}
+
+        <ContentStyle>
+          <HomeSideModuleStyle>
+            <HomeSide/>
+          </HomeSideModuleStyle>
+          <ContentmoduleStyle>
+            <Content>231231</Content>
+          </ContentmoduleStyle>
+        </ContentStyle>
       </div>
     )
   }
