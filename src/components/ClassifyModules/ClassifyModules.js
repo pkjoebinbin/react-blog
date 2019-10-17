@@ -3,11 +3,11 @@ import styled from 'styled-components'
 
 const ModuleStyles = styled.div `
   margin: 0 auto;
-  max-width:1200px;
+  /* max-width:1200px; */
   margin-top:26px;
   display:flex;
   justify-content:space-between;
-  background:#f7f7f7;
+  /* background:#f7f7f7; */
 
   .section-modules {
     width:24.5%;

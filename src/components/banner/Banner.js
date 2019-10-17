@@ -6,7 +6,7 @@ import { Carousel } from 'antd'
 const BannerStyle = styled.div `
   height:340px;
   margin: 0 auto;
-  max-width:1200px;
+  /* max-width:1200px; */
   display:flex;
   justify-content:space-between;
 

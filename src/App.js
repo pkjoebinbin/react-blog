@@ -5,6 +5,11 @@ import routes from './router/routeConfig'
 import { Provider } from 'react-redux'
 import store from './store/index'
 // import './index.less';
+import styled from 'styled-components'
+
+const AppStyle = styled.div `
+  background:#f7f7f7;
+`
 
 class App extends Component {
   constructor (props) {
@@ -20,7 +25,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <AppStyle>
         <Provider store= {store}>
           <BrowserRouter>
             <Switch>
@@ -38,7 +43,7 @@ class App extends Component {
             </Switch>
           </BrowserRouter>
         </Provider>
-      </div>
+      </AppStyle>
     )
   }
 }

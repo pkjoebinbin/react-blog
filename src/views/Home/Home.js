@@ -5,7 +5,9 @@ import styled from 'styled-components'
 
  const MainStyle = styled.div `
   padding:100px 0 40px 0;
-  background:#f7f7f7;
+  /* background:red; */
+  max-width:1200px;
+  margin:0 auto;
  `
 
 class Index extends Component {
