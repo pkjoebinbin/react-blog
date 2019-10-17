@@ -1,17 +1,16 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
 
-// const homeSideStyle = styled.div `
-//   width:25%;
-//   background:blue;
-// `
+const HomeSideStyle = styled.div `
+
+`
 
 class HomeSide extends Component {
   render () {
     return (
-      <homeSideStyle>
+      <HomeSideStyle>
         side
-      </homeSideStyle>
+      </HomeSideStyle>
     )
   }
 }

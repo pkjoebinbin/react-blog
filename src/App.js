@@ -7,6 +7,17 @@ import store from './store/index'
 // import './index.less';
 
 class App extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {}
+  }
+
+
+  componentDidMount = () => {
+
+  }
+
   render() {
     return (
       <div className="App">
@@ -16,14 +27,14 @@ class App extends Component {
             {
               routes.map((item, i) => {
                 if (item.exact) {
-                  return <Route exact path={item.path} key={i} render={props => (<item.component {...props} routes={item.subs}/>)}/>
+                  return <Route exact path={item.path} key={i} render={props => (<item.component {...props} routes={item.routes}/>)}/>
                 } else {
-                  return <Route path={item.path} key={i} render={props => (<item.component {...props} routes={item.subs}/>)}/>
+                  return <Route path={item.path} key={i} render={props => (<item.component {...props} routes={item.routes}/>)}/>
                 }
               })
             }
             <Redirect exact from="/" to="/home"/>
-            <Redirect from="*" to="/404"/>
+            <Redirect exact from="*" to="/404"/>
             </Switch>
           </BrowserRouter>
         </Provider>

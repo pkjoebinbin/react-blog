@@ -39,16 +39,18 @@ const ModuleStyles = styled.div `
 export default class extends Component {
   constructor (props) {
     super(props)
+
+    this.state = {
+      modulesList: [
+        { title: '前端', payloadList: [11111111111,2222222222222,33333333333333,44444444444444] },
+        { title: '后端', payloadList: [1,2,3,4] },
+        { title: '设计', payloadList: [1,2,3,4] },
+        { title: '其他', payloadList: [1,2,3,4] }
+      ]
+    }
   }
 
-  state = {
-    modulesList: [
-      { title: '前端', payloadList: [11111111111,2222222222222,33333333333333,44444444444444] },
-      { title: '后端', payloadList: [1,2,3,4] },
-      { title: '设计', payloadList: [1,2,3,4] },
-      { title: '其他', payloadList: [1,2,3,4] }
-    ]
-  }
+
 
   // 渲染模块逻辑
   showModules = () => {

@@ -5,7 +5,7 @@ import { Carousel } from 'antd'
 
 const BannerStyle = styled.div `
   height:340px;
-  margin: 60px auto 0;
+  margin: 0 auto;
   max-width:1200px;
   display:flex;
   justify-content:space-between;
@@ -51,20 +51,20 @@ const BannerStyle = styled.div `
 export default class extends Component {
   constructor (props) {
     super(props)
-  }
 
-  state = {
-    imgs: [
-      'https://image.uisdc.com/wp-content/uploads/2019/08/uisdc-bbanner-dark.jpg',
-      'https://image.uisdc.com/wp-content/uploads/2019/08/uisdc-bbanner-ml0806.jpg'
-    ],
-
-    rightBannerList: [
-      'https://image.uisdc.com/wp-content/uploads/2019/08/uisdc-bbanner-dark.jpg',
-      'https://image.uisdc.com/wp-content/uploads/2019/08/uisdc-bbanner-ml0806.jpg',
-      'https://image.uisdc.com/wp-content/uploads/2019/08/uisdc-bbanner-dark.jpg',
-      'https://image.uisdc.com/wp-content/uploads/2019/08/uisdc-bbanner-ml0806.jpg'
-    ]
+    this.state = {
+      imgs: [
+        'https://image.uisdc.com/wp-content/uploads/2019/08/uisdc-bbanner-dark.jpg',
+        'https://image.uisdc.com/wp-content/uploads/2019/08/uisdc-bbanner-ml0806.jpg'
+      ],
+  
+      rightBannerList: [
+        'https://image.uisdc.com/wp-content/uploads/2019/08/uisdc-bbanner-dark.jpg',
+        'https://image.uisdc.com/wp-content/uploads/2019/08/uisdc-bbanner-ml0806.jpg',
+        'https://image.uisdc.com/wp-content/uploads/2019/08/uisdc-bbanner-dark.jpg',
+        'https://image.uisdc.com/wp-content/uploads/2019/08/uisdc-bbanner-ml0806.jpg'
+      ]
+    }
   }
 
   render () {

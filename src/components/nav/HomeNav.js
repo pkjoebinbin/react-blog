@@ -24,7 +24,6 @@ const HomeNavStyle = styled.div `
   }
   
   .nav-list {
-
     width:100%;
   }
 `
@@ -32,13 +31,23 @@ const HomeNavStyle = styled.div `
 class HomeNav extends Component {
   constructor (props) {
     super(props)
+
+    this.state = {
+      navList: [
+        '/home',
+        '/home/archives'
+      ]
+    }
   }
 
-  state = {
-    navList: [
-      '首页',
-      '归档'
-    ]
+  componentDidMount = () => {
+
+  }
+
+  click = (item) => {
+    // console.log(window.reactHistory)
+    let history = window.reactHistory
+    history.push(item)
   }
 
   render () {
@@ -49,7 +58,11 @@ class HomeNav extends Component {
             logo
           </div>
 
-          <nav className="nav-list">12221</nav>
+          {
+            this.state.navList.map((item, i) => {
+              return <span key={i} onClick={ () => {this.click(item)}}>{item}</span>
+            })
+          }
         </header>
       </HomeNavStyle>
     )
