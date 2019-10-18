@@ -13,7 +13,7 @@ const ContentOutModuleStyle = styled.div `
   background:#fff;
   max-width:1200px;
   display:flex;
-  justify-content:space-between;
+  /* justify-content:space-between; */
   border:1px solid #efefef;
 `
 const BannerClassifyStyle = styled.div `
@@ -22,14 +22,25 @@ const BannerClassifyStyle = styled.div `
 `
 // 列表样式
 const ListStyle = styled.div `
-  /* background:red; */
-  width:75.9%;
+  width:58%;
+  /* padding:0 20px; */
+
+  .fetch-all-button {
+    display:block;
+    margin:30px auto 0;
+    width:90%;
+    border:none;
+    background:#f50;
+    color:#fff;
+    padding:10px 0;
+    cursor:pointer;
+  }
 `
 
 // 左边栏样式
 const LeftsideStyle = styled.div `
   /* background:green; */
-  width:23.6%;
+  width:18%;
 `
 
 class HomeIndexPage extends Component {
@@ -48,7 +59,9 @@ class HomeIndexPage extends Component {
 
           <ListStyle>
             <BasicList/>
+            <button className="fetch-all-button">查看全部</button>
           </ListStyle>
+
         </ContentOutModuleStyle>
       </div>
     )
