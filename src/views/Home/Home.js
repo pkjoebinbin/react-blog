@@ -25,7 +25,6 @@ class Index extends Component {
     return (
       <div>
         <HomeNav/>
-
         <MainStyle>
           <Switch>
             {

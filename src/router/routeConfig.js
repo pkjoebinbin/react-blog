@@ -14,10 +14,7 @@ const routes = [
     component: Home,
     routes: [
       { path: '/home', component: HomeIndexPage, exact: true },
-      { path: '/home/archives', component: ArticleList, exact: true },
-      // { path: '/home', component: HomeIndexPage },
-      // { path: '/home/archives', component: ArticleList },
-
+      { path: '/home/archives', component: ArticleList, exact: true }
     ]
   },
   {

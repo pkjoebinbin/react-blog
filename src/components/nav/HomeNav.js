@@ -34,14 +34,18 @@ class HomeNav extends Component {
 
     this.state = {
       navList: [
-        '/home',
-        '/home/archives'
+        { title: '首页', url: '/home' },
+        { title: '文章', url: '/home/archives' }
       ]
     }
   }
 
   componentDidMount = () => {
 
+  }
+
+  shouldComponentUpdate = () => {
+    return false
   }
 
   click = (item) => {
@@ -60,7 +64,7 @@ class HomeNav extends Component {
 
           {
             this.state.navList.map((item, i) => {
-              return <span key={i} onClick={ () => {this.click(item)}}>{item}</span>
+              return <div key={i} onClick={ () => {this.click(item.url)}}>{item.title}</div>
             })
           }
         </header>

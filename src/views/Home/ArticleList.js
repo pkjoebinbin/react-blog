@@ -2,14 +2,23 @@ import React, { Component } from 'react'
 import styled from 'styled-components'
 
 const ListStyle = styled.div `
-  background:red;
+
 `
 
 class ArticleList extends Component {
+
+  componentDidMount = () => {
+    console.log('did')
+  }
+
+  componentWillMount = () => {
+    console.log('will')
+  }
+
   render () {
     return (
       <ListStyle>
-        article
+        <p>asdfasdfsf</p>
       </ListStyle>
     )
   }

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import ClassifyModules from '../../components/ClassifyModules/ClassifyModules'
 import Banner from '../../components/banner/Banner'
-// import HomeSide from '../../components/side/HomeSide'
+import TabList from '../../components/TabList/TabList'
 import BasicList from '../../components/DataList/BasicList'
 
 import styled from 'styled-components'
@@ -43,7 +43,7 @@ class HomeIndexPage extends Component {
 
         <ContentOutModuleStyle>
           <LeftsideStyle>
-            {/* <HomeSide/> */}
+            <TabList/>
           </LeftsideStyle>
 
           <ListStyle>

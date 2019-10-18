@@ -17,7 +17,6 @@ const BannerStyle = styled.div `
 
     .ant-carousel {
       height:100%;
-      background:green;
 
       .left-banner-img {
         width:100%;
