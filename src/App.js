@@ -9,6 +9,7 @@ import styled from 'styled-components'
 
 const AppStyle = styled.div `
   background:#f7f7f7;
+  height:100%;
 `
 
 class App extends Component {

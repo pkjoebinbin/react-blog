@@ -23,14 +23,11 @@ const routes = [
     component: ErrorPage
   },
   {
-    path: '/login',
-    exact: true,
-    component: Login
-  },
-  {
     path: '/mainlayout',
-    exact: true,
-    component: MainLayOut
+    component: MainLayOut,
+    routes: [
+      { path: '/mainlayout/login', exact: true, component: Login }
+    ]
   }
 ]
 
