@@ -8,8 +8,9 @@ import store from './store/index'
 import styled from 'styled-components'
 
 const AppStyle = styled.div `
-  background:#f7f7f7;
-  height:100%;
+  /* background:#f7f7f7; */
+  /* position:relative; */
+
 `
 
 class App extends Component {

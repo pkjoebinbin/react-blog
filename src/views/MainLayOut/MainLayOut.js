@@ -1,5 +1,14 @@
 import React, { Component } from 'react'
 import { Button, Modal } from 'antd'
+import { Route, Redirect, Switch } from 'react-router-dom'
+import styled from 'styled-components'
+
+const LocalStyle = styled.div `
+  position:absolute;
+  /* background:#333333; */
+  height:100%;
+  width:100%;
+`
 
 class Mainlayout extends Component {
   constructor (props) {
@@ -25,15 +34,7 @@ class Mainlayout extends Component {
   }
 
   componentWillMount () {
-    // this.checkLogin()
-
-    Modal.info({
-      title: 'fun',
-      onOk: () => {
-        // this.props.history.push('./login')
-      }
-
-    })
+    console.log(this.props)
   }
 
   show = () => {
@@ -52,13 +53,20 @@ class Mainlayout extends Component {
 
   render () {
     return (
-      <div className="Mainlayout">
-        <Button onClick={this.show}>123</Button>
-        <Modal visible={this.state.visible} title="test" onOk={this.handleOk} onCancel={this.handleOk}>
-          rrrrrrr
-        </Modal>
-
-      </div>
+      <LocalStyle>
+        <Switch>
+          {
+            this.props.routes.map((item, i) => {
+              if (item.exact) {
+                return <Route exact path={item.path} key={i} render={props => (<item.component {...props} routes={item.routes}/>)}/>
+              } else {
+                return <Route path={item.path} key={i} render={props => (<item.component {...props} routes={item.routes}/>)}/>
+              }
+            })
+          }
+          <Redirect exact from="*" to="/404"/>
+        </Switch>
+      </LocalStyle>
     )
   }
 }

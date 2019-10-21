@@ -39,7 +39,7 @@ const ListStyle = styled.div `
 
 // 左边栏样式
 const LeftsideStyle = styled.div `
-  /* background:green; */
+  padding: 0 20px 0 0;
   width:18%;
 `
 
@@ -51,7 +51,6 @@ class HomeIndexPage extends Component {
           <Banner/>
           <ClassifyModules/>
         </BannerClassifyStyle>
-
         <ContentOutModuleStyle>
           <LeftsideStyle>
             <TabList/>
