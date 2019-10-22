@@ -3,7 +3,7 @@ import ClassifyModules from '../../components/ClassifyModules/ClassifyModules'
 import Banner from '../../components/banner/Banner'
 import TabList from '../../components/TabList/TabList'
 import BasicList from '../../components/DataList/BasicList'
-
+import RightSideBasicList from '../../components/RightSideBasicList/RightSideBasicList'
 import styled from 'styled-components'
 
 const ContentOutModuleStyle = styled.div `
@@ -23,7 +23,7 @@ const BannerClassifyStyle = styled.div `
 // 列表样式
 const ListStyle = styled.div `
   width:58%;
-  /* padding:0 20px; */
+  padding:0 20px;
 
   .fetch-all-button {
     display:block;
@@ -43,6 +43,13 @@ const LeftsideStyle = styled.div `
   width:18%;
 `
 
+// 右边栏样式
+const RightSideStyle = styled.div `
+  /* background:pink; */
+  width:24%;
+  padding:0 0 0 20px;
+`
+
 class HomeIndexPage extends Component {
   render () {
     return (
@@ -60,6 +67,10 @@ class HomeIndexPage extends Component {
             <BasicList/>
             <button className="fetch-all-button">查看全部</button>
           </ListStyle>
+
+          <RightSideStyle>
+            <RightSideBasicList/>
+          </RightSideStyle>
 
         </ContentOutModuleStyle>
       </div>

@@ -6,7 +6,7 @@ const TabListStyle = styled.div `
   .title {
     color:#aaa;
     background:#f3f3f3;
-    padding:2px 0 2px 6px;
+    padding:4px 0 4px 6px;
     font-size:14px;
     border-left:10px solid #e9e9e9;
   }

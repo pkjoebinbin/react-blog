@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Form, Icon, Input, Button } from 'antd';
-// import LoginModule from './login-style'
+import logoImg from '../../assets/images/logo.svg'
 import styled from 'styled-components'
 
 const LoginModule = styled.div `
@@ -18,6 +18,12 @@ const LoginModule = styled.div `
     left:0;
     right:0;
     bottom:0;
+  }
+
+  .logo {
+    display:block;
+
+    margin:0 auto 20px;
   }
 
   .login-button {
@@ -54,6 +60,7 @@ class Login extends Component {
     return (
       <LoginModule>
         <Form onSubmit={this.handleSubmit} className="loginForm">
+          <img src={logoImg} className="logo" alt="logoImg"/>
           <Form.Item>
             {getFieldDecorator('username', {
               rules: [{ required: true, message: '用户名不能为空' }],

@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import logoUrl from '../../assets/images/logo.svg'
 
 const HomeNavStyle = styled.div `
   width:100%;
@@ -18,13 +19,34 @@ const HomeNavStyle = styled.div `
     display:flex;
   }
   
-  .logo {
-    background: #ff6231;
-    width:140px;
+  .logo-module {
+    background: #f50;
+    width:180px;
+    display:flex;
+    justify-content:center;
+    cursor:pointer;
+
+    .logo-img {
+      display:block;
+      width:85%;
+    }
   }
   
   .nav-list {
     width:100%;
+    /* background:green; */
+    display:flex;
+    margin-left:20px;
+
+    .nav-item {
+      /* background:pink; */
+      width:9%;
+      text-align:center;
+      color:#525252;
+      font-size:15px;
+      font-weight:400;
+      cursor:pointer;
+    }
   }
 `
 
@@ -35,7 +57,8 @@ class HomeNav extends Component {
     this.state = {
       navList: [
         { title: '首页', url: '/home' },
-        { title: '文章', url: '/home/archives' }
+        { title: '文章', url: '/home/archives' },
+        { title: '工具', url: '' }
       ]
     }
   }
@@ -44,8 +67,13 @@ class HomeNav extends Component {
 
   }
 
+  toHome = () => {
+    let history = window.reactHistory
+    history.push('/mainlayout/login')
+  }
+
   shouldComponentUpdate = () => {
-    return false
+
   }
 
   click = (item) => {
@@ -58,15 +86,17 @@ class HomeNav extends Component {
     return (
       <HomeNavStyle>
         <header className="header-center">
-          <div className="logo">
-            logo
+          <div className="logo-module" onClick={this.toHome}>
+            <img src={logoUrl} className="logo-img" alt="logo"/>
           </div>
 
-          {
-            this.state.navList.map((item, i) => {
-              return <div key={i} onClick={ () => {this.click(item.url)}}>{item.title}</div>
-            })
-          }
+          <div className="nav-list">
+            {
+              this.state.navList.map((item, i) => {
+                return <div className="nav-item" key={i} onClick={ () => {this.click(item.url)}}>{item.title}</div>
+              })
+            }
+          </div>
         </header>
       </HomeNavStyle>
     )
