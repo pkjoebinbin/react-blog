@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { Affix } from 'antd'
 
 const TabListStyle = styled.div `
 
@@ -41,24 +42,28 @@ class TabList extends Component {
         { title: 'express', type: '' },
         { title: 'nodejs', type: '' },
         { title: '热门', type: '' },
-      ]
+      ],
+
+      offSetTop: 80    // 左边栏图钉参数
     }
   }
 
   render () {
     return (
-      <TabListStyle>
-        <p className="title">常用标签</p>
-        <div className="tabList-module">
-          {
-            this.state.tabList.map((item, i) => {
-              return (
-                <p className="tab-item" key={i}>{item.title}</p>
-              )
-            })
-          }
-        </div>
-      </TabListStyle>
+      <Affix offsetTop={this.state.offSetTop}>
+        <TabListStyle>
+          <p className="title">常用标签</p>
+          <div className="tabList-module">
+            {
+              this.state.tabList.map((item, i) => {
+                return (
+                  <p className="tab-item" key={i}>{item.title}</p>
+                )
+              })
+            }
+          </div>
+        </TabListStyle>
+      </Affix>
     )
   }
 }

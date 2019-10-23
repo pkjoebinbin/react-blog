@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Route, Redirect, Switch } from 'react-router-dom'
 import HomeNav from '../../components/nav/HomeNav'
 import styled from 'styled-components'
+import bcImg from '../../assets/images/backgroundPicture.png'
 
  const MainStyle = styled.div `
   padding:100px 0 40px 0;
@@ -10,6 +11,7 @@ import styled from 'styled-components'
 
  const MainCenter = styled.div `
   max-width:1200px;
+  min-width:1200px;
   margin:0 auto;
  `
 

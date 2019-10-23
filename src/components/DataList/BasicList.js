@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const ListStyle = styled.div `
   border-left:1px solid #efefef;
-  border-right:1px solid #efefef;
+  /* border-right:1px solid #efefef; */
   padding:0 40px;
   /* background:pink; */
 
@@ -26,7 +26,7 @@ const ListStyle = styled.div `
       font-size:12px;
     }
 
-    .content {
+    .data-content {
       margin-top:16px;
     }
   }
@@ -39,8 +39,15 @@ class BasicList extends Component {
 
     this.state = {
       list: [
-        { title: '大师傅大师傅大师傅大师傅大师傅大师傅大', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg', content: 'xxxxx', date: '2019-10-19', content: '师法第三方阿斯顿发师法第三方阿斯顿发师法第三方阿斯顿发大师法第三方阿斯顿发送到发送阿斯顿发送到发送到' },
-        { title: '大师傅大师傅大师傅大师傅大师傅大师傅大', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg', content: 'xxxxx', date: '2019-10-19', content: '师法第三方阿斯顿发师法第三方阿斯顿发师法第三方阿斯顿发大师法第三方阿斯顿发送到发送阿斯顿发送到发送到' },
+        { title: '大师傅大师傅大师傅大师傅大师傅大师傅大', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg', date: '2019-10-19', content: '师法第三方阿斯顿发师法第三方阿斯顿发师法第三方阿斯顿发大师法第三方阿斯顿发送到发送阿斯顿发送到发送到' },
+        { title: '大师傅大师傅大师傅大师傅大师傅大师傅大', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg', date: '2019-10-19', content: '师法第三方阿斯顿发师法第三方阿斯顿发师法第三方阿斯顿发大师法第三方阿斯顿发送到发送阿斯顿发送到发送到' },
+        { title: '大师傅大师傅大师傅大师傅大师傅大师傅大', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg', date: '2019-10-19', content: '师法第三方阿斯顿发师法第三方阿斯顿发师法第三方阿斯顿发大师法第三方阿斯顿发送到发送阿斯顿发送到发送到' },
+        { title: '大师傅大师傅大师傅大师傅大师傅大师傅大', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg', date: '2019-10-19', content: '师法第三方阿斯顿发师法第三方阿斯顿发师法第三方阿斯顿发大师法第三方阿斯顿发送到发送阿斯顿发送到发送到' },
+        { title: '大师傅大师傅大师傅大师傅大师傅大师傅大', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg', date: '2019-10-19', content: '师法第三方阿斯顿发师法第三方阿斯顿发师法第三方阿斯顿发大师法第三方阿斯顿发送到发送阿斯顿发送到发送到' },
+        { title: '大师傅大师傅大师傅大师傅大师傅大师傅大', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg', date: '2019-10-19', content: '师法第三方阿斯顿发师法第三方阿斯顿发师法第三方阿斯顿发大师法第三方阿斯顿发送到发送阿斯顿发送到发送到' },
+        { title: '大师傅大师傅大师傅大师傅大师傅大师傅大', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg', date: '2019-10-19', content: '师法第三方阿斯顿发师法第三方阿斯顿发师法第三方阿斯顿发大师法第三方阿斯顿发送到发送阿斯顿发送到发送到' },
+        { title: '大师傅大师傅大师傅大师傅大师傅大师傅大', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg', date: '2019-10-19', content: '师法第三方阿斯顿发师法第三方阿斯顿发师法第三方阿斯顿发大师法第三方阿斯顿发送到发送阿斯顿发送到发送到' },
+        { title: '大师傅大师傅大师傅大师傅大师傅大师傅大', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg', date: '2019-10-19', content: '师法第三方阿斯顿发师法第三方阿斯顿发师法第三方阿斯顿发大师法第三方阿斯顿发送到发送阿斯顿发送到发送到' }
 
       ]
     }
@@ -54,10 +61,10 @@ class BasicList extends Component {
           this.state.list.map((item, i) => {
             return (
               <article className="article-module" key={i}>
-                <h3 className="title"><a href="">{item.title}</a></h3>
+                <h3 className="title"><a href="item">{item.title}</a></h3>
                 <p className="date-title">{item.date}</p>
                 {/* <img src={item.img} className="article-img"/> */}
-                <p className="content">{item.content}</p>
+                <p className="data-content">{item.content}</p>
               </article>
             )
           })

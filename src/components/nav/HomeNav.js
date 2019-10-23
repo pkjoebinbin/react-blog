@@ -11,10 +11,12 @@ const HomeNavStyle = styled.div `
   z-index:9;
   background:#fff;
   border-bottom:1px solid #efefef;
+  box-shadow:0 0 30px rgba(0,0,0,0.15);
 
   .header-center {
     width:100%;
     max-width:1200px;
+    min-width:1200px;
     margin:0 auto;
     display:flex;
   }
@@ -40,7 +42,8 @@ const HomeNavStyle = styled.div `
 
     .nav-item {
       /* background:pink; */
-      width:9%;
+      width:6%;
+      margin-right:20px;
       text-align:center;
       color:#525252;
       font-size:15px;
@@ -96,6 +99,7 @@ class HomeNav extends Component {
                 return <div className="nav-item" key={i} onClick={ () => {this.click(item.url)}}>{item.title}</div>
               })
             }
+            <div className="nav-item">关于我</div>
           </div>
         </header>
       </HomeNavStyle>

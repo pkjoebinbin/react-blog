@@ -1,5 +1,21 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { List, Card } from 'antd'
+
+const data = [
+  {
+    title: '前端',
+  },
+  {
+    title: '后端',
+  },
+  {
+    title: '设计',
+  },
+  {
+    title: '工具',
+  },
+];
 
 const ModuleStyles = styled.div `
   margin: 0 auto;

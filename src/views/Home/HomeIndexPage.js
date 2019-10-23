@@ -51,6 +51,14 @@ const RightSideStyle = styled.div `
 `
 
 class HomeIndexPage extends Component {
+  constructor (props) {
+    super(props)
+
+    this.state = {
+
+    }
+  }
+
   render () {
     return (
       <div>
