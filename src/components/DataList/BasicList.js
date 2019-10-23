@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
+import { Pagination  } from 'antd'
 
 const ListStyle = styled.div `
   border-left:1px solid #efefef;
@@ -31,6 +32,10 @@ const ListStyle = styled.div `
     }
   }
 
+  .pagination {
+    margin:20px 0 0 0;
+  }
+
 `
 class BasicList extends Component {
 
@@ -53,10 +58,14 @@ class BasicList extends Component {
     }
   }
 
+  paginationDis = () => {
+    return this.props.listType ? `block` : `none`
+  }
+
   render () {
     return (
       <ListStyle>
-        <h3 className="module-title">最新文章</h3>
+        <h3 className="module-title">{this.props.listType}</h3>
         {
           this.state.list.map((item, i) => {
             return (
@@ -69,7 +78,7 @@ class BasicList extends Component {
             )
           })
         }
-
+        <Pagination defaultCurrent={6} total={500} className="pagination" style={{display: this.paginationDis()}}/>
       </ListStyle>
     )
   }

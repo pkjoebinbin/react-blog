@@ -75,10 +75,6 @@ class HomeNav extends Component {
     history.push('/mainlayout/login')
   }
 
-  shouldComponentUpdate = () => {
-
-  }
-
   click = (item) => {
     // console.log(window.reactHistory)
     let history = window.reactHistory

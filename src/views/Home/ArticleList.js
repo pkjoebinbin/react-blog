@@ -64,7 +64,7 @@ class ArticleList extends Component {
           </LeftsideStyle>
 
           <ListStyle>
-            <BasicList/>
+            <BasicList listType="全部文章"/>
           </ListStyle>
 
           <RightSideStyle>
