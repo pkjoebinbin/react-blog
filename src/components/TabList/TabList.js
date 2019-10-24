@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import styled from 'styled-components'
-import { Affix } from 'antd'
+import { Affix, Empty } from 'antd'
 
 const TabListStyle = styled.div `
 
@@ -36,16 +36,21 @@ class TabList extends Component {
 
     this.state = {
       tabList: [
-        { title: 'webpack', type: '' },
-        { title: 'vue', type: '' },
-        { title: 'react', type: '' },
-        { title: 'express', type: '' },
-        { title: 'nodejs', type: '' },
-        { title: '热门', type: '' },
+        // { title: 'webpack', type: '' },
+        // { title: 'vue', type: '' },
+        // { title: 'react', type: '' },
+        // { title: 'express', type: '' },
+        // { title: 'nodejs', type: '' },
+        // { title: '热门', type: '' },
       ],
+      test: false,
 
       offSetTop: 80    // 左边栏图钉参数
     }
+  }
+
+  emptyDis = () => {
+    return this.state.tabList.length === 0 ? 'block' : 'none'
   }
 
   render () {
@@ -53,15 +58,16 @@ class TabList extends Component {
       <Affix offsetTop={this.state.offSetTop}>
         <TabListStyle>
           <p className="title">常用标签</p>
-          <div className="tabList-module">
-            {
-              this.state.tabList.map((item, i) => {
-                return (
-                  <p className="tab-item" key={i}>{item.title}</p>
-                )
-              })
-            }
-          </div>
+            <Empty style={{display:this.emptyDis()}}/>
+            <div className="tabList-module">
+              {
+                this.state.tabList.map((item, i) => {
+                  return (
+                    <p className="tab-item" key={i}>{item.title}</p>
+                  )
+                })
+              }
+            </div>
         </TabListStyle>
       </Affix>
     )

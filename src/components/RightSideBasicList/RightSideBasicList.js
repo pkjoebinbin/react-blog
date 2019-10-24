@@ -5,17 +5,17 @@ import { Input, List, Affix } from 'antd'
 const { Search } = Input
 
 const data = [
-  'Racing car sprays burning fuel into crowd.',
-  'Japanese princess to wed commoner.',
-  'Australian walks 100km after outback crash.',
-  'Man charged over missing wedding girl.',
-  'Los Angeles battles huge wildfires.',
+  // '代码高亮，代码高亮代码高亮',
+  // 'Japanese princess to wed commoner.',
+  // 'Australian walks 100km after outback crash.',
+  // 'Man charged over missing wedding girl.',
+  // 'Los Angeles battles huge wildfires.'
 ]
 
 const ToolList = styled.div `
   margin:20px 0 0 0;
 
-  .title {
+  /* .title {
     color:#aaa;
     background:#f3f3f3;
     padding:4px 10px 4px 6px;
@@ -29,10 +29,28 @@ const ToolList = styled.div `
       margin:0;
     }
 
-    .more {
+  } */
 
+  .title-module {
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    .title {
+      font-weight:bold;
+      margin:0;
+    }
+
+    .more {
+      font-size:10px;
+      color:#888;
+      border:1px solid #efefef;
+      padding:3px 5px;
+      cursor: pointer;
     }
   }
+
+
 
   .list-item {
     border:1px solid #efefef;
@@ -58,7 +76,7 @@ class RightSideBasicList extends Component {
 
     this.state = {
       offSetTop: 80,    // 左边栏图钉参数
-
+      test: true,
       toolList: [
         { title: '代码高亮工具', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg' },
         { title: '代码格式化', img: 'http://image.uisdc.com/wp-content/uploads/2019/10/uisdc-banner-20191017-12.jpg' },
@@ -70,25 +88,15 @@ class RightSideBasicList extends Component {
     return (
       <Affix offsetTop={this.state.offSetTop}>
         <Search placeholder="Search" onSearch={value => console.log(value)}/>
-
         <ToolList>
-        {/* <div className="title">
-        <p>工具插件</p>
-        <p className="more">MORE</p>
-        </div>
-        {
-        this.state.toolList.map((item, i) => {
-        return (
-        <div className="list-item" key={i}>
-        <img className="item-img" src={item.img} alt=""/>
-        <p className="item-title">{item.title}</p>
-        </div>
-        )
-        })
-        } */}
           <List
             size="small"
-            header={<div>工具插件</div>}
+            header = {
+              <div className="title-module">
+                <p className="title">工具插件</p>
+                <p style={{margin:0}} className="more">MORE</p>
+              </div>
+            }
             bordered
             dataSource={data}
             renderItem={item => <List.Item>{item}</List.Item>}

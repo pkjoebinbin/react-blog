@@ -59,9 +59,9 @@ class HomeNav extends Component {
 
     this.state = {
       navList: [
-        { title: '首页', url: '/home' },
-        { title: '文章', url: '/home/archives' },
-        { title: '工具', url: '' }
+        { title: '首页', url: '/home', name: 'home' },
+        { title: '文章', url: '/home/archives', name: 'allList' },
+        { title: '工具', url: '/home/archives', name: 'toolList' }
       ]
     }
   }
@@ -76,9 +76,14 @@ class HomeNav extends Component {
   }
 
   click = (item) => {
-    // console.log(window.reactHistory)
+    const { url, name } = item
     let history = window.reactHistory
-    history.push(item)
+
+    if (name !== 'home') {
+      history.push(`${url}/${name}`)
+    } else {
+      history.push(url)
+    }
   }
 
   render () {
@@ -92,7 +97,7 @@ class HomeNav extends Component {
           <div className="nav-list">
             {
               this.state.navList.map((item, i) => {
-                return <div className="nav-item" key={i} onClick={ () => {this.click(item.url)}}>{item.title}</div>
+                return <div className="nav-item" key={i} onClick={ () => {this.click(item)}}>{item.title}</div>
               })
             }
             <div className="nav-item">关于我</div>

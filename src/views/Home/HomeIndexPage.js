@@ -72,7 +72,7 @@ class HomeIndexPage extends Component {
           </LeftsideStyle>
 
           <ListStyle>
-            <BasicList/>
+            <BasicList listType="最新文章"/>
             <button className="fetch-all-button">查看全部</button>
           </ListStyle>
 

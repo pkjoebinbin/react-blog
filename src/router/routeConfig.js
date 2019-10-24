@@ -7,6 +7,8 @@ const MainLayOut = AsyncComponent(() => import('../views/MainLayOut/MainLayOut')
 const HomeIndexPage = AsyncComponent(() => import('../views/Home/HomeIndexPage'))
 const ArticleList = AsyncComponent(() => import('../views/Home/ArticleList'))
 const MainHome = AsyncComponent(() => import('../views/MainLayOut/MainHome'))
+const DetailPage = AsyncComponent(() => import('../views/Home/DetailPage'))
+
 
 const routes = [
   {
@@ -15,7 +17,8 @@ const routes = [
     component: Home,
     routes: [
       { path: '/home', component: HomeIndexPage, exact: true },
-      { path: '/home/archives', component: ArticleList, exact: true }
+      { path: '/home/archives/:listType', component: ArticleList, exact: true },
+      { path: '/home/detail/:caseId', component: DetailPage, exact: true }
     ]
   },
   {

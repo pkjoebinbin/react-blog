@@ -70,7 +70,7 @@ class BasicList extends Component {
           this.state.list.map((item, i) => {
             return (
               <article className="article-module" key={i}>
-                <h3 className="title"><a href="item">{item.title}</a></h3>
+                <h3 className="title"><a href="/home/detail/222">{item.title}</a></h3>
                 <p className="date-title">{item.date}</p>
                 {/* <img src={item.img} className="article-img"/> */}
                 <p className="data-content">{item.content}</p>
