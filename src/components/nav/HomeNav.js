@@ -72,7 +72,7 @@ class HomeNav extends Component {
 
   toHome = () => {
     let history = window.reactHistory
-    history.push('/mainlayout/login')
+    history.push('/mainlayout')
   }
 
   click = (item) => {
