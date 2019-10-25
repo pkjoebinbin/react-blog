@@ -41,11 +41,12 @@ const ListStyle = styled.div `
 const LeftsideStyle = styled.div `
   padding: 0 20px 0 0;
   width:18%;
+  border-right:1px solid #efefef;
+
 `
 
 // 右边栏样式
 const RightSideStyle = styled.div `
-  /* background:pink; */
   width:24%;
   padding:0 0 0 20px;
 `

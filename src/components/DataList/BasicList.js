@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { Pagination  } from 'antd'
 
 const ListStyle = styled.div `
-  border-left:1px solid #efefef;
   /* border-right:1px solid #efefef; */
   padding:0 40px;
   /* background:pink; */

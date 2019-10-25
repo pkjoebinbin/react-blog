@@ -13,6 +13,7 @@ const CenterStyle = styled.div `
 const LeftsideStyle = styled.div `
   padding: 0 20px 0 0;
   width:18%;
+  border-right:1px solid #efefef;
 `
 
 const RightSideStyle = styled.div `

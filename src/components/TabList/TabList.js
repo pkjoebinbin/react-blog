@@ -36,12 +36,12 @@ class TabList extends Component {
 
     this.state = {
       tabList: [
-        // { title: 'webpack', type: '' },
-        // { title: 'vue', type: '' },
-        // { title: 'react', type: '' },
-        // { title: 'express', type: '' },
-        // { title: 'nodejs', type: '' },
-        // { title: '热门', type: '' },
+        { title: 'webpack', type: '' },
+        { title: 'vue', type: '' },
+        { title: 'react', type: '' },
+        { title: 'express', type: '' },
+        { title: 'nodejs', type: '' },
+        { title: '热门', type: '' },
       ],
       test: false,
 
